@@ -1,0 +1,60 @@
+<h1 id="wf_particle">wf_particle</h1>
+<p>Particle system prototype for <a
+href="https://github.com/LeaoMartelo2/wireframe_game">Wireframe
+Engine</a></p>
+<p>(This project uses <a
+href="https://github.com/raysan5/raylib">Raylib</a>)</p>
+<p>(This project uses <a
+href="https://github.com/tsoding/nob.h">nob.h</a>)</p>
+<p><img align="center" src="image.gif"></p>
+<h2 id="configuring-the-project">Configuring the project</h2>
+<p>The source code is pretty simple, everything is on <a
+href="src/main.c">main.c</a><br />
+Keep in mind this is only a prototype.</p>
+<p>Changing the settings can be done by changing the
+<code>#define</code>s at the top of the file.</p>
+<ul>
+<li>MAX_PARTICLES</li>
+</ul>
+<p>Defines the maxt ammount of particles in the screen before it starts
+replacing older ones.</p>
+<ul>
+<li>PARTICLE_ACCELERATION_X</li>
+<li>PARTICLE_ACCELERATION_Y</li>
+</ul>
+<p>Defines the acceleration multiplier on the X and Y axis of the
+particle.</p>
+<ul>
+<li>PARTICLE_VEL_RANGE_X</li>
+<li>PARTICLE_VEL_RANGE_Y</li>
+</ul>
+<p>Define a comma separated value of the velocity multiplier for the X
+and Y axis.<br />
+example: <code>#define PARTICLE_VEL_RANGE_X -5, 5</code></p>
+<ul>
+<li>PARTICLE_SPAWN_DEVIATION</li>
+</ul>
+<p>Max distance in pixels the particle can spawn away from the
+cursor.</p>
+<ul>
+<li>PARTICLE_INITIAL_SIZE</li>
+</ul>
+<p>Initial size of the particle. Shrinks by default.</p>
+<ul>
+<li>PARTICLE_MAIN_COLOR</li>
+<li>PARTICLE_ALT_COLOR</li>
+</ul>
+<p>Particle colors. Alternative color has a proportion of 3/10.</p>
+<ul>
+<li>PARTICLE_DECAY_RATE</li>
+</ul>
+<p>How fast the particle changes size. Usually negative value.</p>
+<h2 id="building-the-project">Building the project</h2>
+<p>First you need to boostrap <a
+href="https://github.com/tsoding/nob.h">nob</a></p>
+<pre class="shell"><code>cc nob.c -o nob.o</code></pre>
+<p>You only need to do this for the first time.</p>
+<p>After that, compile the project with:</p>
+<pre class="shell"><code>./nob</code></pre>
+<p>and run the program with:</p>
+<pre class="shell"><code>./main</code></pre>
